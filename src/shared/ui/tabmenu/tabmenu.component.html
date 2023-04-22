@@ -1,0 +1,11 @@
+<div class="tabs">
+  <ng-container *ngFor="let header of headers">
+    <div class="tab" (click)="select(header)">
+      <span>{{ header }}</span>
+    </div>
+  </ng-container>
+</div>
+
+<div class="container">
+  <ng-container #container></ng-container>
+</div>

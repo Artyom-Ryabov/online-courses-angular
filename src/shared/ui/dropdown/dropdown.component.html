@@ -1,0 +1,67 @@
+<ng-template
+  #defaultTemplate
+  let-option
+>
+  <span>{{ option }}</span>
+</ng-template>
+
+<ng-template
+  #selectionList
+  let-options
+>
+  <ng-container *ngIf="isOpen">
+    <div
+      class="select__options"
+      [ngClass]="borderStyle"
+    >
+      <ng-container *ngFor="let option of options">
+        <div
+          [ngClass]="isSelected(option) ? 'select__options_active' : ''"
+          (click)="select(option)"
+        >
+          <ng-container
+            *ngTemplateOutlet="
+              optionTemplate ?? selectTemplate ?? defaultTemplate;
+              context: { $implicit: option }
+            "
+          ></ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #unselected>
+  <span>Не выбрано</span>
+</ng-template>
+
+<ng-template
+  #selectedOption
+  let-option
+>
+  <ng-container
+    *ngTemplateOutlet="selectTemplate ?? defaultTemplate; context: { $implicit: option }"
+  ></ng-container>
+</ng-template>
+
+<div
+  class="select"
+  [ngClass]="borderStyle"
+>
+  <div
+    class="select__item"
+    (click)="open()"
+  >
+    <div>
+      <ng-container
+        *ngTemplateOutlet="
+          value == null ? unselected : selectedOption;
+          context: { $implicit: value }
+        "
+      ></ng-container>
+    </div>
+    <span class="select__item__arrow"></span>
+  </div>
+
+  <ng-container *ngTemplateOutlet="selectionList; context: { $implicit: items }"></ng-container>
+</div>

@@ -1,0 +1,32 @@
+:host {
+  background-color: transparent;
+  margin: auto;
+  height: auto;
+  width: auto;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: transparent;
+
+  .tab {
+    padding: 1em;
+    cursor: pointer;
+    user-select: none;
+    background-color: white;
+
+    > * {
+      cursor: inherit;
+    }
+  }
+}
+
+.container {
+  padding: 1em;
+  border-top-color: lightgrey;
+  border-top-width: 2px;
+  border-top-style: solid;
+  background-color: white;
+}

@@ -1,0 +1,29 @@
+@property --ui-button-text-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #050505;
+}
+
+@property --ui-button-bg-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #efefef;
+}
+
+@property --ui-button-border-width {
+	syntax: '<length> | thin | medium | thick';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --ui-button-border-style {
+	syntax: 'none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset';
+	inherits: true;
+	initial-value: none;
+}
+
+@property --ui-button-border-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}

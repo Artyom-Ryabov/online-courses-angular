@@ -1,0 +1,29 @@
+@property --ui-dropdown-text-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #050505;
+}
+
+@property --ui-dropdown-bg-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #efefef;
+}
+
+@property --ui-dropdown-border-width {
+	syntax: '<length> | thin | medium | thick';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --ui-dropdown-border-style {
+	syntax: 'none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset';
+	inherits: true;
+	initial-value: none;
+}
+
+@property --ui-dropdown-border-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
