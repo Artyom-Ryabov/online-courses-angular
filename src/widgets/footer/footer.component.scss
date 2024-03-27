@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+
+  background: var(--clr-gradient);
+  color: var(--clr-bs-200);
+}

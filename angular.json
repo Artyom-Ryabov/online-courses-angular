@@ -30,7 +30,8 @@
               "src/public/assets"
             ],
             "styles": [
-              "src/public/styles.scss"
+              "src/public/styles.scss",
+              "src/public/colors.scss"
             ],
             "scripts": []
           },
